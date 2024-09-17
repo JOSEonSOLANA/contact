@@ -1,3 +1,5 @@
+Proyecto para crear una tabla de contactos, donde se puede editar, crear, agregar, ordenar.... contactos conectado con firebase.
+
 # Contact
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.3.

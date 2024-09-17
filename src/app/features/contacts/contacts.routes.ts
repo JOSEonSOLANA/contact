@@ -9,4 +9,4 @@ const contactsRoute:Routes = [
 
 ];
 
-export default  contactsRoute;
+export default contactsRoute;

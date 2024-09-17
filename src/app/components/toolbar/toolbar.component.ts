@@ -31,10 +31,10 @@ const MATERIAL_MODULES = [ MatToolbarModule, MatIconModule, MatButtonModule ]
       
     </mat-toolbar>
   `,
-  styles: ``
 })
 export class ToolbarComponent {
   onNewContactEvent = output<void>();
+  
   emitClick(): void{
     this.onNewContactEvent.emit();
   }

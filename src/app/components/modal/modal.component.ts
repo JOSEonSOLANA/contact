@@ -40,7 +40,7 @@ export class ModalComponent implements OnInit {
     if(this._matDialog.data) {
       this._contactSvc.updateContact(this._matDialog.data.id, contact);
     } else {
-      this._contactSvc.newContact(contact);
+      await this._contactSvc.newContact(contact);
       message = APP_CONSTANTS.MESSAGES.CONTACT_ADDED;
     }
 

@@ -15,8 +15,8 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
         <app-grid [displayedColumns]="displayedColumns" [data]="contacts()" [sortableColumns]="sortables"/>
     </section>
   `,
-  styles: ``
 })
+
 export class ListComponent implements OnInit {
   contacts = signal<Contact[]>([]);
   

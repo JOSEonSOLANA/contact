@@ -14,16 +14,16 @@ export class ContactService {
         return addDoc(this._contactCollection, {
             created: Date.now(),
             updated: Date.now(),
-            ... contact,
+            ...contact
         })
     }
 
     getAllContacts():Observable<Contact[]> {
-        const queryFn = query(this._contactCollection, orderBy('create', 'desc'));
+        const queryFn = query(this._contactCollection, orderBy('created', 'desc'));
         return collectionData(queryFn, {idField: 'id'}) as Observable<Contact[]>
     }
 
-    async getContactById(id:string) {
+    async getContactById(id:string):Promise<Contact> {
         const docRef = this._getDocRef(id)
         const documentData = await getDoc(docRef);
         return documentData.data() as Contact;
@@ -31,7 +31,7 @@ export class ContactService {
 
     updateContact(id:string, contact: Contact):void  {
         const docRef = this._getDocRef(id);
-        updateDoc(docRef, { ... contact });
+        updateDoc(docRef, { ...contact });
     }
 
     deleteContact(id:string):void  {

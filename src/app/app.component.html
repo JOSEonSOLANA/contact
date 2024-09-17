@@ -3,7 +3,7 @@
         <mat-card-content>
             @defer {
                 <app-toolbar (onNewContactEvent)="onClickNewContact()" />
-                <router-outlet/>
+                <router-outlet />
             }@loading(minimum 1s) {
                 <div class="spinner-container">
                     <mat-spinner mode="indeterminate"></mat-spinner>
